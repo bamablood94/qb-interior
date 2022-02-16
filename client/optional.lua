@@ -118,7 +118,7 @@ end
 
 -- Classic Housing Shells https://k4mb1.tebex.io/package/4673140
 
-local function CreateClassicHouse(spawn)
+--[[local function CreateClassicHouse(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 4.78, "y": -2.11, "z": 5.26, "h": 87.93}')
@@ -173,7 +173,7 @@ local function CreateClassicHouse3(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end]]
 
 -- Highend Housing Shells https://k4mb1.tebex.io/package/4673131
 
@@ -295,7 +295,7 @@ end
 
 -- Stash House Shells https://k4mb1.tebex.io/package/4673273
 
-local function CreateStashHouse(spawn)
+--[[local function CreateStashHouse(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 20.88, "y": -0.40, "z": 15.42, "h": 86.54}')
@@ -350,7 +350,7 @@ local function CreateContainer(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end]]
 
 -- Garage Shells https://k4mb1.tebex.io/package/4673177
 
@@ -628,7 +628,7 @@ end
 
 -- Highend Lab Shells https://k4mb1.tebex.io/package/4698329
 
-local function CreateK4Coke(spawn)
+--[[local function CreateK4Coke(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -11.06, "y": -2.52, "z": 22.64, "h": 272.51}')
@@ -683,11 +683,11 @@ local function CreateK4Weed(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end]]
 
 -- Furnished Stash House Shells https://k4mb1.tebex.io/package/4672293
 
-local function CreateContainer2(spawn)
+--[[local function CreateContainer2(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 0.02, "y": -5.37, "z": 1.12, "h": 355.28}')
@@ -742,11 +742,11 @@ local function CreateFurniStash3(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end]]
 
 -- Furnished Housing Shells https://k4mb1.tebex.io/package/4672272
 
-local function CreateFurniLow(spawn)
+--[[local function CreateFurniLow(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 5.05, "y": -1.39, "z": 3.0, "h": 357.14}')
@@ -801,11 +801,11 @@ local function CreateFurniMotel(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end]]
 
 -- Furnished Motel Shells https://k4mb1.tebex.io/package/4672296
 
-local function CreateFurniMotelClassic(spawn)
+--[[local function CreateFurniMotelClassic(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 0.045, "y": -3.707, "z": 1.05, "h": 351.86}')
@@ -860,11 +860,11 @@ local function CreateFurniMotelHigh(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end]]
 
 -- Furnished Modern Hotels https://k4mb1.tebex.io/package/4672290
 
-local function CreateFurniMotelModern(spawn)
+--[[local function CreateFurniMotelModern(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 4.98, "y": 4.35, "z": 1.16, "h": 179.79}')
@@ -919,7 +919,7 @@ local function CreateFurniMotelModern3(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end]]
 
 -- Drug Lab Shells https://k4mb1.tebex.io/package/4672285
 
@@ -1020,7 +1020,7 @@ end
 
 -- Mansions
 
-local function CreateMansion(spawn)
+--[[local function CreateMansion(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -0.32, "y": -0.68, "z": 7.86, "h": 178.98}')
@@ -1075,62 +1075,94 @@ local function CreateMansion3(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end]]
 
 -- Exports
 
 exports('CreateFranklinAunt', CreateFranklinAunt)
 exports('CreateMedium2', CreateMedium2)
 exports('CreateMedium3', CreateMedium3)
+
+-- MODERN HOUSING SHELLS
 exports('CreateBanham', CreateBanham)
 exports('CreateWestons', CreateWestons)
 exports('CreateWestons2', CreateWestons2)
-exports('CreateClassicHouse', CreateClassicHouse)
-exports('CreateClassicHouse2', CreateClassicHouse2)
-exports('CreateClassicHouse3', CreateClassicHouse3)
+
+--CLASSIC HOUSING SHELLS
+--exports('CreateClassicHouse', CreateClassicHouse)
+--exports('CreateClassicHouse2', CreateClassicHouse2)
+--exports('CreateClassicHouse3', CreateClassicHouse3)
+
+--HIGHEND HOUSING SHELLS
 exports('CreateHighend1', CreateHighend1)
 exports('CreateHighend2', CreateHighend2)
 exports('CreateHighend3', CreateHighend3)
+
+--DELUXE HOUSING SHELLS
 exports('CreateHighend', CreateHighend)
 exports('CreateHighendV2', CreateHighendV2)
 exports('CreateMichael', CreateMichael)
-exports('CreateStashHouse', CreateStashHouse)
-exports('CreateStashHouse2', CreateStashHouse2)
-exports('CreateContainer', CreateContainer)
+
+--STASH HOUSE SHELLS
+--exports('CreateStashHouse', CreateStashHouse)
+--exports('CreateStashHouse2', CreateStashHouse2)
+--exports('CreateContainer', CreateContainer)
+
+--GARAGE SHELLS
 exports('CreateGarageLow', CreateGarageLow)
 exports('CreateGarageMed', CreateGarageMed)
 exports('CreateGarageHigh', CreateGarageHigh)
+
+--OFFICE SHELLS
 exports('CreateOffice1', CreateOffice1)
 exports('CreateOffice2', CreateOffice2)
 exports('CreateOfficeBig', CreateOfficeBig)
+
+--STORE SHELLS
 exports('CreateBarber', CreateBarber)
 exports('CreateGunstore', CreateGunstore)
 exports('CreateStore1', CreateStore1)
 exports('CreateStore2', CreateStore2)
 exports('CreateStore3', CreateStore3)
+
+--WAREHOUSE SHELLS
 exports('CreateWarehouse1', CreateWarehouse1)
 exports('CreateWarehouse2', CreateWarehouse2)
 exports('CreateWarehouse3', CreateWarehouse3)
-exports('CreateK4Coke', CreateK4Coke)
-exports('CreateK4Meth', CreateK4Meth)
-exports('CreateK4Weed', CreateK4Weed)
-exports('CreateContainer2', CreateContainer2)
-exports('CreateFurniStash1', CreateFurniStash1)
-exports('CreateFurniStash3', CreateFurniStash3)
-exports('CreateFurniLow', CreateFurniLow)
-exports('CreateFurniMid', CreateFurniMid)
-exports('CreateFurniMotel', CreateFurniMotel)
-exports('CreateFurniMotelClassic', CreateFurniMotelClassic)
-exports('CreateFurniMotelStandard', CreateFurniMotelStandard)
-exports('CreateFurniMotelHigh', CreateFurniMotelHigh)
-exports('CreateFurniMotelModern', CreateFurniMotelModern)
-exports('CreateFurniMotelModern2', CreateFurniMotelModern2)
-exports('CreateFurniMotelModern3', CreateFurniMotelModern3)
+
+--HIGH END LABS SHELLS
+--exports('CreateK4Coke', CreateK4Coke)
+--exports('CreateK4Meth', CreateK4Meth)
+--exports('CreateK4Weed', CreateK4Weed)
+
+--FURNISHED STASH HOUSE SHELLS
+--exports('CreateContainer2', CreateContainer2)
+--exports('CreateFurniStash1', CreateFurniStash1)
+--exports('CreateFurniStash3', CreateFurniStash3)
+
+--FURNISHED HOUSING SHELLS
+--exports('CreateFurniLow', CreateFurniLow)
+--exports('CreateFurniMid', CreateFurniMid)
+--exports('CreateFurniMotel', CreateFurniMotel)
+
+--FURNISHED MOTEL SHELLS
+--exports('CreateFurniMotelClassic', CreateFurniMotelClassic)
+--exports('CreateFurniMotelStandard', CreateFurniMotelStandard)
+--exports('CreateFurniMotelHigh', CreateFurniMotelHigh)
+
+--FURNISHED MODERN MOTEL SHELLS
+--exports('CreateFurniMotelModern', CreateFurniMotelModern)
+--exports('CreateFurniMotelModern2', CreateFurniMotelModern2)
+--exports('CreateFurniMotelModern3', CreateFurniMotelModern3)
+
+--DRUG LAB SHELLS
 exports('CreateCoke', CreateCoke)
 exports('CreateCoke2', CreateCoke2)
 exports('CreateMeth', CreateMeth)
 exports('CreateWeed', CreateWeed)
 exports('CreateWeed2', CreateWeed2)
-exports('CreateMansion', CreateMansion)
-exports('CreateMansion2', CreateMansion2)
-exports('CreateMansion3', CreateMansion3)
+
+--MANSION SHELLS
+--exports('CreateMansion', CreateMansion)
+--exports('CreateMansion2', CreateMansion2)
+--exports('CreateMansion3', CreateMansion3)
