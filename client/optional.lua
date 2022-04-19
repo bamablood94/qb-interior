@@ -1,25 +1,6 @@
--- Medium Housing Shells https://k4mb1.tebex.io/package/4672307
+-- Medium Housing Shells https://www.k4mb1maps.com/package/4672307
 
-local function CreateFranklinAunt(spawn)
-	local objects = {}
-    local POIOffsets = {}
-	POIOffsets.exit = json.decode('{"x": -0.36, "y": -5.89, "z": 1.70, "h": 358.21}')
-	DoScreenFadeOut(500)
-    while not IsScreenFadedOut() do
-        Wait(10)
-    end
-	RequestModel(`shell_frankaunt`)
-	while not HasModelLoaded(`shell_frankaunt`) do
-	    Wait(1000)
-	end
-	local house = CreateObject(`shell_frankaunt`, spawn.x, spawn.y, spawn.z, false, false, false)
-    FreezeEntityPosition(house, true)
-    objects[#objects+1] = house
-	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
-    return { objects, POIOffsets }
-end
-
-local function CreateMedium2(spawn)
+exports('CreateMedium2', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 6.04, "y": 0.34, "z": 1.03, "h": 357.99}')
@@ -36,9 +17,9 @@ local function CreateMedium2(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateMedium3(spawn)
+exports('CreateMedium3', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 3.32, "y": 1.23, "z": 2.57, "h": 273.46}')
@@ -55,11 +36,11 @@ local function CreateMedium3(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
--- Modern Housing Shells https://k4mb1.tebex.io/package/4673169
+-- Modern Housing Shells https://www.k4mb1maps.com/package/4673169
 
-local function CreateBanham(spawn)
+exports('CreateBanham', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -3.26, "y": -1.63, "z": 6.25, "h": 90.49}')
@@ -76,9 +57,9 @@ local function CreateBanham(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateWestons(spawn)
+exports('CreateWestons', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 4.29, "y": 10.59, "z": 6.95, "h": 183.60}')
@@ -95,9 +76,9 @@ local function CreateWestons(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateWestons2(spawn)
+exports('CreateWestons2', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -1.76, "y": 10.62, "z": 6.95, "h": 179.20}')
@@ -114,11 +95,11 @@ local function CreateWestons2(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
--- Classic Housing Shells https://k4mb1.tebex.io/package/4673140
+-- Classic Housing Shells https://www.k4mb1maps.com/package/4673140
 
---[[local function CreateClassicHouse(spawn)
+exports('CreateClassicHouse', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 4.78, "y": -2.11, "z": 5.26, "h": 87.93}')
@@ -135,9 +116,9 @@ end
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateClassicHouse2(spawn)
+exports('CreateClassicHouse2', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 4.78, "y": -2.09, "z": 5.26, "h": 90.58}')
@@ -154,9 +135,9 @@ local function CreateClassicHouse2(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateClassicHouse3(spawn)
+exports('CreateClassicHouse3', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 4.78, "y": -2.12, "z": 5.26, "h": 91.60}')
@@ -173,11 +154,11 @@ local function CreateClassicHouse3(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end]]
+end)
 
--- Highend Housing Shells https://k4mb1.tebex.io/package/4673131
+-- Highend Housing Shells https://www.k4mb1maps.com/package/4673131
 
-local function CreateHighend1(spawn)
+exports('CreateHighend1', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -2.23, "y": 9.01, "z": 8.69, "h": 178.81}')
@@ -194,9 +175,9 @@ local function CreateHighend1(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateHighend2(spawn)
+exports('CreateHighend2', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -2.25, "y": 9.00, "z": 8.69, "h": 177.86}')
@@ -213,9 +194,9 @@ local function CreateHighend2(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateHighend3(spawn)
+exports('CreateHighend3', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 11.75, "y": 4.55, "z": 8.13, "h": 129.16}')
@@ -232,11 +213,11 @@ local function CreateHighend3(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
--- Deluxe Housing Shells https://k4mb1.tebex.io/package/4673159
+-- Deluxe Housing Shells https://www.k4mb1maps.com/package/4673159
 
-local function CreateHighend(spawn)
+exports('CreateHighend', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -22.37, "y": -0.33, "z": 7.26, "h": 267.73}')
@@ -253,9 +234,9 @@ local function CreateHighend(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateHighendV2(spawn)
+exports('CreateHighendV2', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -10.51, "y": 0.86, "z": 6.56, "h": 270.38}')
@@ -272,30 +253,11 @@ local function CreateHighendV2(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateMichael(spawn)
-	local objects = {}
-    local POIOffsets = {}
-	POIOffsets.exit = json.decode('{"x": -9.49, "y": 5.54, "z": 9.91, "h": 270.86}')
-	DoScreenFadeOut(500)
-    while not IsScreenFadedOut() do
-        Wait(10)
-    end
-	RequestModel(`shell_michael`)
-	while not HasModelLoaded(`shell_michael`) do
-	    Wait(1000)
-	end
-	local house = CreateObject(`shell_michael`, spawn.x, spawn.y, spawn.z, false, false, false)
-    FreezeEntityPosition(house, true)
-    objects[#objects+1] = house
-	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
-    return { objects, POIOffsets }
-end
+-- Stash House Shells https://www.k4mb1maps.com/package/4673273
 
--- Stash House Shells https://k4mb1.tebex.io/package/4673273
-
---[[local function CreateStashHouse(spawn)
+exports('CreateStashHouse', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 20.88, "y": -0.40, "z": 15.42, "h": 86.54}')
@@ -312,9 +274,9 @@ end
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateStashHouse2(spawn)
+exports('CreateStashHouse2', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -1.98, "y": 2.26, "z": 1.0, "h": 263.81}')
@@ -331,30 +293,11 @@ local function CreateStashHouse2(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateContainer(spawn)
-	local objects = {}
-    local POIOffsets = {}
-	POIOffsets.exit = json.decode('{"x": 0.08, "y": -5.73, "z": 1.24, "h": 359.32}')
-	DoScreenFadeOut(500)
-    while not IsScreenFadedOut() do
-        Wait(10)
-    end
-	RequestModel(`container_shell`)
-	while not HasModelLoaded(`container_shell`) do
-	    Wait(1000)
-	end
-	local house = CreateObject(`container_shell`, spawn.x, spawn.y, spawn.z, false, false, false)
-    FreezeEntityPosition(house, true)
-    objects[#objects+1] = house
-	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
-    return { objects, POIOffsets }
-end]]
+-- Garage Shells https://www.k4mb1maps.com/package/4673177
 
--- Garage Shells https://k4mb1.tebex.io/package/4673177
-
-local function CreateGarageLow(spawn)
+exports('CreateGarageLow', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 5.85, "y": 3.86, "z": 1.0, "h": 180.05}')
@@ -371,28 +314,9 @@ local function CreateGarageLow(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateGarageMed(spawn)
-	local objects = {}
-    local POIOffsets = {}
-	POIOffsets.exit = json.decode('{"x": 13.90, "y": 1.63, "z": 1.0, "h": 87.05}')
-	DoScreenFadeOut(500)
-    while not IsScreenFadedOut() do
-        Wait(10)
-    end
-	RequestModel(`shell_garagem`)
-	while not HasModelLoaded(`shell_garagem`) do
-	    Wait(1000)
-	end
-	local house = CreateObject(`shell_garagem`, spawn.x, spawn.y, spawn.z, false, false, false)
-    FreezeEntityPosition(house, true)
-    objects[#objects+1] = house
-	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
-    return { objects, POIOffsets }
-end
-
-local function CreateGarageHigh(spawn)
+exports('CreateGarageHigh', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 12.02, "y": -14.30, "z": 0.99, "h": 89.42}')
@@ -409,30 +333,11 @@ local function CreateGarageHigh(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
--- Office Shells https://k4mb1.tebex.io/package/4673258
+-- Office Shells https://www.k4mb1maps.com/package/4673258
 
-local function CreateOffice1(spawn)
-	local objects = {}
-    local POIOffsets = {}
-	POIOffsets.exit = json.decode('{"x": 1.88, "y": 5.06, "z": 2.05, "h": 180.07}')
-	DoScreenFadeOut(500)
-    while not IsScreenFadedOut() do
-        Wait(10)
-    end
-	RequestModel(`shell_office1`)
-	while not HasModelLoaded(`shell_office1`) do
-	    Wait(1000)
-	end
-	local house = CreateObject(`shell_office1`, spawn.x, spawn.y, spawn.z, false, false, false)
-    FreezeEntityPosition(house, true)
-    objects[#objects+1] = house
-	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
-    return { objects, POIOffsets }
-end
-
-local function CreateOffice2(spawn)
+exports('CreateOffice2', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 3.66, "y": -1.94, "z": 1.26, "h": 92.73}')
@@ -449,9 +354,9 @@ local function CreateOffice2(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateOfficeBig(spawn)
+exports('CreateOfficeBig', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -12.48, "y": 1.91, "z": 5.30, "h": 175.13}')
@@ -468,11 +373,11 @@ local function CreateOfficeBig(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
--- Store Shells https://k4mb1.tebex.io/package/4673264
+-- Store Shells https://www.k4mb1maps.com/package/4673264
 
-local function CreateBarber(spawn)
+exports('CreateBarber', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 1.54, "y": 5.40, "z": 1.0, "h": 175.27}')
@@ -489,9 +394,9 @@ local function CreateBarber(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateGunstore(spawn)
+exports('CreateGunstore', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -1.02, "y": -5.43, "z": 1.03, "h": 359.77}')
@@ -508,28 +413,9 @@ local function CreateGunstore(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateStore1(spawn)
-	local objects = {}
-    local POIOffsets = {}
-	POIOffsets.exit = json.decode('{"x": -2.61, "y": -4.73, "z": 1.08, "h": 1.0}')
-	DoScreenFadeOut(500)
-    while not IsScreenFadedOut() do
-        Wait(10)
-    end
-	RequestModel(`shell_store1`)
-	while not HasModelLoaded(`shell_store1`) do
-	    Wait(1000)
-	end
-	local house = CreateObject(`shell_store1`, spawn.x, spawn.y, spawn.z, false, false, false)
-    FreezeEntityPosition(house, true)
-    objects[#objects+1] = house
-	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
-    return { objects, POIOffsets }
-end
-
-local function CreateStore2(spawn)
+exports('CreateStore2', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -0.64, "y": -5.07, "z": 1.02, "h": 1.91}')
@@ -546,9 +432,9 @@ local function CreateStore2(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateStore3(spawn)
+exports('CreateStore3', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -0.14, "y": -7.87, "z": 2.01, "h": 358.15}')
@@ -565,30 +451,11 @@ local function CreateStore3(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
--- Warehouse Shells https://k4mb1.tebex.io/package/4673185
+-- Warehouse Shells https://www.k4mb1maps.com/package/4673185
 
-local function CreateWarehouse1(spawn)
-	local objects = {}
-    local POIOffsets = {}
-	POIOffsets.exit = json.decode('{"x": -8.95, "y": 0.51, "z": 1.04, "h": 268.82}')
-	DoScreenFadeOut(500)
-    while not IsScreenFadedOut() do
-        Wait(10)
-    end
-	RequestModel(`shell_warehouse1`)
-	while not HasModelLoaded(`shell_warehouse1`) do
-	    Wait(1000)
-	end
-	local house = CreateObject(`shell_warehouse1`, spawn.x, spawn.y, spawn.z, false, false, false)
-    FreezeEntityPosition(house, true)
-    objects[#objects+1] = house
-	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
-    return { objects, POIOffsets }
-end
-
-local function CreateWarehouse2(spawn)
+exports('CreateWarehouse2', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 12.51, "y": -0.01, "z": 1.03, "h": 94.52}')
@@ -605,9 +472,9 @@ local function CreateWarehouse2(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateWarehouse3(spawn)
+exports('CreateWarehouse3', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 2.61, "y": -1.65, "z": 1.00, "h": 85.2}')
@@ -624,11 +491,11 @@ local function CreateWarehouse3(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
--- Highend Lab Shells https://k4mb1.tebex.io/package/4698329
+-- Highend Lab Shells https://www.k4mb1maps.com/package/4698329
 
---[[local function CreateK4Coke(spawn)
+exports('CreateK4Coke', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -11.06, "y": -2.52, "z": 22.64, "h": 272.51}')
@@ -645,9 +512,9 @@ end
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateK4Meth(spawn)
+exports('CreateK4Meth', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -11.06, "y": -2.48, "z": 9.47, "h": 277.54}')
@@ -664,9 +531,9 @@ local function CreateK4Meth(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateK4Weed(spawn)
+exports('CreateK4Weed', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -11.05, "y": -2.50, "z": 20.96, "h": 283.97}')
@@ -683,11 +550,11 @@ local function CreateK4Weed(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end]]
+end)
 
--- Furnished Stash House Shells https://k4mb1.tebex.io/package/4672293
+-- Furnished Stash House Shells  https://www.k4mb1maps.com/package/4672293
 
---[[local function CreateContainer2(spawn)
+exports('CreateContainer2', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 0.02, "y": -5.37, "z": 1.12, "h": 355.28}')
@@ -704,9 +571,9 @@ end]]
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateFurniStash1(spawn)
+exports('CreateFurniStash1', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 21.41, "y": -0.52, "z": 19.33, "h": 85.84}')
@@ -723,9 +590,9 @@ local function CreateFurniStash1(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateFurniStash3(spawn)
+exports('CreateFurniStash3', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -0.003, "y": 5.5, "z": 3.04, "h": 180.77}')
@@ -742,11 +609,11 @@ local function CreateFurniStash3(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end]]
+end)
 
--- Furnished Housing Shells https://k4mb1.tebex.io/package/4672272
+-- Furnished Housing Shells https://www.k4mb1maps.com/package/4672272
 
---[[local function CreateFurniLow(spawn)
+exports('CreateFurniLow', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 5.05, "y": -1.39, "z": 3.0, "h": 357.14}')
@@ -763,28 +630,9 @@ end]]
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateFurniMid(spawn)
-	local objects = {}
-    local POIOffsets = {}
-	POIOffsets.exit = json.decode('{"x": 1.46, "y": -10.33, "z": 1.06, "h": 0.39}')
-	DoScreenFadeOut(500)
-    while not IsScreenFadedOut() do
-        Wait(10)
-    end
-	RequestModel(`furnitured_midapart`)
-	while not HasModelLoaded(`furnitured_midapart`) do
-	    Wait(1000)
-	end
-	local house = CreateObject(`furnitured_midapart`, spawn.x, spawn.y, spawn.z, false, false, false)
-    FreezeEntityPosition(house, true)
-    objects[#objects+1] = house
-	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
-    return { objects, POIOffsets }
-end
-
-local function CreateFurniMotel(spawn)
+exports('CreateFurniMotel', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -1.51, "y": -3.99, "z": 1.08, "h": 1.28}')
@@ -801,11 +649,11 @@ local function CreateFurniMotel(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end]]
+end)
 
--- Furnished Motel Shells https://k4mb1.tebex.io/package/4672296
+-- Furnished Motel Shells  https://www.k4mb1maps.com/package/4672296
 
---[[local function CreateFurniMotelClassic(spawn)
+exports('CreateFurniMotelClassic', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 0.045, "y": -3.707, "z": 1.05, "h": 351.86}')
@@ -822,28 +670,9 @@ end]]
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateFurniMotelStandard(spawn)
-	local objects = {}
-    local POIOffsets = {}
-	POIOffsets.exit = json.decode('{"x": -0.43, "y": -2.51, "z": 1.0, "h": 271.29}')
-	DoScreenFadeOut(500)
-    while not IsScreenFadedOut() do
-        Wait(10)
-    end
-	RequestModel(`standardmotel_shell`)
-	while not HasModelLoaded(`standardmotel_shell`) do
-	    Wait(1000)
-	end
-	local house = CreateObject(`standardmotel_shell`, spawn.x, spawn.y, spawn.z, false, false, false)
-    FreezeEntityPosition(house, true)
-    objects[#objects+1] = house
-	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
-    return { objects, POIOffsets }
-end
-
-local function CreateFurniMotelHigh(spawn)
+exports('CreateFurniMotelHigh', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 3.21, "y": 3.50, "z": 1.16, "h": 178.23}')
@@ -860,30 +689,11 @@ local function CreateFurniMotelHigh(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end]]
+end)
 
--- Furnished Modern Hotels https://k4mb1.tebex.io/package/4672290
+-- Furnished Modern Hotels https://www.k4mb1maps.com/package/4672290
 
---[[local function CreateFurniMotelModern(spawn)
-	local objects = {}
-    local POIOffsets = {}
-	POIOffsets.exit = json.decode('{"x": 4.98, "y": 4.35, "z": 1.16, "h": 179.79}')
-	DoScreenFadeOut(500)
-    while not IsScreenFadedOut() do
-        Wait(10)
-    end
-	RequestModel(`modernhotel_shell`)
-	while not HasModelLoaded(`modernhotel_shell`) do
-	    Wait(1000)
-	end
-	local house = CreateObject(`modernhotel_shell`, spawn.x, spawn.y, spawn.z, false, false, false)
-    FreezeEntityPosition(house, true)
-    objects[#objects+1] = house
-	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
-    return { objects, POIOffsets }
-end
-
-local function CreateFurniMotelModern2(spawn)
+exports('CreateFurniMotelModern2', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 4.87, "y": 4.38, "z": 1.16, "h": 176.40}')
@@ -900,9 +710,9 @@ local function CreateFurniMotelModern2(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateFurniMotelModern3(spawn)
+exports('CreateFurniMotelModern3', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 4.95, "y": 4.38, "z": 1.16, "h": 176.01}')
@@ -919,11 +729,11 @@ local function CreateFurniMotelModern3(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end]]
+end)
 
--- Drug Lab Shells https://k4mb1.tebex.io/package/4672285
+-- Drug Lab Shells https://www.k4mb1maps.com/package/4672285
 
-local function CreateCoke(spawn)
+exports('CreateCoke', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -6.24, "y": 8.48, "z": 1.00, "h": 179.30}')
@@ -940,9 +750,9 @@ local function CreateCoke(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateCoke2(spawn)
+exports('CreateCoke2', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -6.32, "y": 8.60, "z": 1.03, "h": 179.23}')
@@ -959,9 +769,9 @@ local function CreateCoke2(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateMeth(spawn)
+exports('CreateMeth', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -6.39, "y": 8.54, "z": 1.03, "h": 178.84}')
@@ -978,9 +788,9 @@ local function CreateMeth(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateWeed(spawn)
+exports('CreateWeed', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 17.46, "y": 11.71, "z": 1.01, "h": 88.37}')
@@ -997,9 +807,9 @@ local function CreateWeed(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateWeed2(spawn)
+exports('CreateWeed2', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 17.85, "y": 11.75, "z": 1.01, "h": 88.11}')
@@ -1016,11 +826,11 @@ local function CreateWeed2(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
--- Mansions
+-- k4mb1 Mansion Housing https://www.k4mb1maps.com/package/4783251
 
---[[local function CreateMansion(spawn)
+exports('CreateMansion', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -0.32, "y": -0.68, "z": 7.86, "h": 178.98}')
@@ -1037,9 +847,9 @@ end
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateMansion2(spawn)
+exports('CreateMansion2', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -0.32, "y": -0.57, "z": 7.86, "h": 178.74}')
@@ -1056,9 +866,9 @@ local function CreateMansion2(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateMansion3(spawn)
+exports('CreateMansion3', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -0.18, "y": -0.57, "z": 7.86, "h": 180.76}')
@@ -1075,94 +885,4 @@ local function CreateMansion3(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end]]
-
--- Exports
-
-exports('CreateFranklinAunt', CreateFranklinAunt)
-exports('CreateMedium2', CreateMedium2)
-exports('CreateMedium3', CreateMedium3)
-
--- MODERN HOUSING SHELLS
-exports('CreateBanham', CreateBanham)
-exports('CreateWestons', CreateWestons)
-exports('CreateWestons2', CreateWestons2)
-
---CLASSIC HOUSING SHELLS
---exports('CreateClassicHouse', CreateClassicHouse)
---exports('CreateClassicHouse2', CreateClassicHouse2)
---exports('CreateClassicHouse3', CreateClassicHouse3)
-
---HIGHEND HOUSING SHELLS
-exports('CreateHighend1', CreateHighend1)
-exports('CreateHighend2', CreateHighend2)
-exports('CreateHighend3', CreateHighend3)
-
---DELUXE HOUSING SHELLS
-exports('CreateHighend', CreateHighend)
-exports('CreateHighendV2', CreateHighendV2)
-exports('CreateMichael', CreateMichael)
-
---STASH HOUSE SHELLS
---exports('CreateStashHouse', CreateStashHouse)
---exports('CreateStashHouse2', CreateStashHouse2)
---exports('CreateContainer', CreateContainer)
-
---GARAGE SHELLS
-exports('CreateGarageLow', CreateGarageLow)
-exports('CreateGarageMed', CreateGarageMed)
-exports('CreateGarageHigh', CreateGarageHigh)
-
---OFFICE SHELLS
-exports('CreateOffice1', CreateOffice1)
-exports('CreateOffice2', CreateOffice2)
-exports('CreateOfficeBig', CreateOfficeBig)
-
---STORE SHELLS
-exports('CreateBarber', CreateBarber)
-exports('CreateGunstore', CreateGunstore)
-exports('CreateStore1', CreateStore1)
-exports('CreateStore2', CreateStore2)
-exports('CreateStore3', CreateStore3)
-
---WAREHOUSE SHELLS
-exports('CreateWarehouse1', CreateWarehouse1)
-exports('CreateWarehouse2', CreateWarehouse2)
-exports('CreateWarehouse3', CreateWarehouse3)
-
---HIGH END LABS SHELLS
---exports('CreateK4Coke', CreateK4Coke)
---exports('CreateK4Meth', CreateK4Meth)
---exports('CreateK4Weed', CreateK4Weed)
-
---FURNISHED STASH HOUSE SHELLS
---exports('CreateContainer2', CreateContainer2)
---exports('CreateFurniStash1', CreateFurniStash1)
---exports('CreateFurniStash3', CreateFurniStash3)
-
---FURNISHED HOUSING SHELLS
---exports('CreateFurniLow', CreateFurniLow)
---exports('CreateFurniMid', CreateFurniMid)
---exports('CreateFurniMotel', CreateFurniMotel)
-
---FURNISHED MOTEL SHELLS
---exports('CreateFurniMotelClassic', CreateFurniMotelClassic)
---exports('CreateFurniMotelStandard', CreateFurniMotelStandard)
---exports('CreateFurniMotelHigh', CreateFurniMotelHigh)
-
---FURNISHED MODERN MOTEL SHELLS
---exports('CreateFurniMotelModern', CreateFurniMotelModern)
---exports('CreateFurniMotelModern2', CreateFurniMotelModern2)
---exports('CreateFurniMotelModern3', CreateFurniMotelModern3)
-
---DRUG LAB SHELLS
-exports('CreateCoke', CreateCoke)
-exports('CreateCoke2', CreateCoke2)
-exports('CreateMeth', CreateMeth)
-exports('CreateWeed', CreateWeed)
-exports('CreateWeed2', CreateWeed2)
-
---MANSION SHELLS
---exports('CreateMansion', CreateMansion)
---exports('CreateMansion2', CreateMansion2)
---exports('CreateMansion3', CreateMansion3)
+end)
